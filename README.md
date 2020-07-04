@@ -1,5 +1,5 @@
-# Deskmode Switcher 1.0
- Switch between Darkmode and Lightmode in iBuntu V 1.0
+# Deskmode Switcher 1.1
+ Switch between Darkmode and Lightmode in iBuntu V 1.2
 
 ### Important
 iBuntu is a flavor of Ubuntu 18.04 LTS by the time of this Readme in it's first final release Version.
