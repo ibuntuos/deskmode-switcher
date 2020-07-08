@@ -1,6 +1,6 @@
 #!/bin/bash
 #####################################################
-# (c) 2020 by Oliver Jung
+# (c) 2020 by iBuntu OS
 # 
 # Script for Changing Desktopmode in iBuntu
 # 
