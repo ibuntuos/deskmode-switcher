@@ -2,7 +2,7 @@
 Version=1.0
 Name=Deskmode Switch
 Comment=Little Tool for switching between Light and Darkmode in iBuntu
-Exec=/etc/deskmode-switch/gtk_swith_deskmode.sh
+Exec=/etc/deskmode-switch/gtk_swith_deskmode.py
 Path=/etc/deskmode-switch/
 Icon=/etc/deskmode-switch/switch_icon.png
 Terminal=false

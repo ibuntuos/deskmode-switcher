@@ -4,8 +4,9 @@
 # 
 # Script for Changing Desktopmode in iBuntu
 # 
-#V 1.0   09.01.2020 (Do)
+#V 1.0   09.01.2020 (Th)
 #V 1.1   04.07.2020 (Sa)
+#V 1.2   08.08.2020 (Sa)
 #####################################################
 
 #get actual chosen theme and set values for zenity checkbox to FALSE
@@ -14,11 +15,11 @@ light="FALSE"
 dark="FALSE"
 
 #check if Light-Mode is enabled
-if  [ "$mode" = "'Os-Catalina-gtk'" ]; then
+if  [ "$mode" = "'Os-Catalina-gtk'" ] ||  [ "$mode" = "'WhiteSur-light'" ]; then
 
 	light="TRUE"
 	dark="FALSE"
-elif  [ "$mode" = "'Mc-OS-CTLina-Gnome-Dark-1.1'" ]; then
+elif  [ "$mode" = "'Mc-OS-CTLina-Gnome-Dark-1.1'" ] || [  "$mode" = "'WhiteSur-dark'" ]; then
 
 	light="FALSE"
 	dark="TRUE"
