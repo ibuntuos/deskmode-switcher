@@ -1,8 +1,8 @@
 # Deskmode Switcher 1.1
- Switch between Darkmode and Lightmode in iBuntu V 1.2
+ Switch between Darkmode and Lightmode in iBuntu Version 1 and Version 3
 
 ### Important
-iBuntu is a flavor of Ubuntu 18.04 LTS by the time of this Readme in it's first final release Version.
+iBuntu is a flavor of Ubuntu LTS
 
 
 This program is just a shell-script whith a desktop-application which allows the user to switch with one click pre-setted themes for GTK3, the User-Shell-Theme, Background-Picture and Plank-themes

@@ -2,6 +2,7 @@
 #	(c) 2020 by iBuntu OS
 # 	08/08/2020
 #	Recoding of Deskmode-Switcher for Version 1.3 Catalinux
+#       02/04/2023 adjustment for Version 3.0 Monterix
 
 import PySimpleGUI as sg
 import subprocess
@@ -21,16 +22,16 @@ settings = Gio.Settings.new("org.gnome.shell.extensions.user-theme")
 mode=settings.get_string("name")
 print(mode)
 
-if mode == "Os-Catalina-gtk" or mode == "WhiteSur-light":
+if mode == "Colloid-Light" or mode == "WhiteSur-Light":
 	light=True
 	dark=False
 
-if mode == "Mc-OS-CTLina-Gnome-Dark-1.1" or mode == "WhiteSur-dark":
+if mode == "Colloid-Dark" or mode == "WhiteSur-Dark":
 	light=False
 	dark=True
 	theme='DarkGrey5'
 
-if mode == "WhiteSur-light" or mode == "WhiteSur-dark":
+if mode == "WhiteSur-Light" or mode == "WhiteSur-Dark":
 	sur=True
 
 if light == False and dark == False:
@@ -72,41 +73,41 @@ while True:
 	if event == 'OK':
 		if values['Bright'] == True:
 			if values['BigSur'] == True:
-				os.system('gsettings set org.gnome.shell.extensions.user-theme name "WhiteSur-light"')
-				os.system('gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-light"')
-				os.system('gsettings set org.gnome.desktop.interface icon-theme "WhiteSur"')
-				os.system('gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme "mcOS-BS-White"')
-				os.system('gsettings set org.gnome.desktop.background  picture-uri "file:///usr/share/backgrounds/BigSurBright.png"')
-				os.system('gsettings set org.gnome.desktop.screensaver picture-uri "file:///usr/share/backgrounds/BigLock.png"')
+				os.system('gsettings set org.gnome.shell.extensions.user-theme name "WhiteSur-Light"')
+				os.system('gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-Light"')
+				os.system('gsettings set org.gnome.desktop.interface icon-theme "Colloid"')
+#				os.system('gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme "mcOS-BS-White"')
+				os.system('gsettings set org.gnome.desktop.background  picture-uri "file:///usr/share/backgrounds/WhiteSur-light.png"')
+#				os.system('gsettings set org.gnome.desktop.screensaver picture-uri "file:///usr/share/backgrounds/BigLock.png"')
 				break
 
 			else:
-				os.system('gsettings set org.gnome.shell.extensions.user-theme name "Os-Catalina-gtk"')
-				os.system('gsettings set org.gnome.desktop.interface gtk-theme "Os-Catalina-gtk"')
-				os.system('gsettings set org.gnome.desktop.interface icon-theme "Cupertino-Catalina"')
-				os.system('gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme "macOS Catalina Day Default"')
-				os.system('gsettings set org.gnome.desktop.background  picture-uri "file:///usr/share/backgrounds/Catalina-13.jpg"')
-				os.system('gsettings set org.gnome.desktop.screensaver picture-uri "file:///usr/share/backgrounds/Catalina-13.jpg"')
+				os.system('gsettings set org.gnome.shell.extensions.user-theme name "Colloid-Light"')
+				os.system('gsettings set org.gnome.desktop.interface gtk-theme "Colloid-Light"')
+				os.system('gsettings set org.gnome.desktop.interface icon-theme "Colloid"')
+#				os.system('gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme "macOS Catalina Day Default"')
+				os.system('gsettings set org.gnome.desktop.background  picture-uri "file:///usr/share/backgrounds/Monterey-light.png"')
+#				os.system('gsettings set org.gnome.desktop.screensaver picture-uri "file:///usr/share/backgrounds/Catalina-13.jpg"')
 				break
 
 		if values['Dark'] == True:
 
 			if values['BigSur'] == True:
-				os.system('gsettings set org.gnome.shell.extensions.user-theme name "WhiteSur-dark"')
-				os.system('gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-dark"')
-				os.system('gsettings set org.gnome.desktop.interface icon-theme "WhiteSur"')
-				os.system('gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme "mcOS-BS-Bluish-NS"')
-				os.system('gsettings set org.gnome.desktop.background  picture-uri "file:///usr/share/backgrounds/BigSurDark.jpg"')
-				os.system('gsettings set org.gnome.desktop.screensaver picture-uri "file:///usr/share/backgrounds/BigLock.png"')
+				os.system('gsettings set org.gnome.shell.extensions.user-theme name "WhiteSur-Dark"')
+				os.system('gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-Dark"')
+				os.system('gsettings set org.gnome.desktop.interface icon-theme "Colloid"')
+#				os.system('gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme "mcOS-BS-Bluish-NS"')
+				os.system('gsettings set org.gnome.desktop.background  picture-uri "file:///usr/share/backgrounds/WhiteSur-dark.png"')
+#				os.system('gsettings set org.gnome.desktop.screensaver picture-uri "file:///usr/share/backgrounds/BigLock.png"')
 				break
 
 			else:
-				os.system('gsettings set org.gnome.shell.extensions.user-theme name "Mc-OS-CTLina-Gnome-Dark-1.1"')
-				os.system('gsettings set org.gnome.desktop.interface gtk-theme "Mc-OS-CTLina-Gnome-Dark-1.1"')
-				os.system('gsettings set org.gnome.desktop.interface icon-theme "Cupertino-Catalina"')
-				os.system('gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme "macOS Catalina Night Default"')
-				os.system('gsettings set org.gnome.desktop.background  picture-uri "file:///usr/share/backgrounds/Catalina-15.jpg"')
-				os.system('gsettings set org.gnome.desktop.screensaver picture-uri "file:///usr/share/backgrounds/Catalina-13.jpg"')
+				os.system('gsettings set org.gnome.shell.extensions.user-theme name "Colloid-Dark"')
+				os.system('gsettings set org.gnome.desktop.interface gtk-theme "Colloid-Dark"')
+				os.system('gsettings set org.gnome.desktop.interface icon-theme "Colloid"')
+	#			os.system('gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme "macOS Catalina Night Default"')
+				os.system('gsettings set org.gnome.desktop.background  picture-uri "file:///usr/share/backgrounds/Monterey-dark.png"')
+	#			os.system('gsettings set org.gnome.desktop.screensaver picture-uri "file:///usr/share/backgrounds/Catalina-13.jpg"')
 				break
 
 
